@@ -1,20 +1,20 @@
 #include "main.h"
+
 /**
- *_puts - prints a string
- *@str: A pointer to an int that will be changed
- *
- *Return: void which means our answer is correct
+ * _puts - Write a function that prints a string, followed
+ * by a new line, to stdout.
+ * @str: an input string
+ * Return: Nothing
  */
 
 void _puts(char *str)
 {
-
-int i;
-
-for (i = 0; str[i] != '\0'; i++)
-{
-_putchar(str[i]);
-}
-_putchar('\n');
-return;
+		int i = 0;
+		
+		while (str[i] != '\0')
+		{
+			_putchar(str[i]);
+			i++;
+		}
+		_putchar('\n');
 }
