@@ -1,29 +1,30 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _strncat - Write a function that concatenates two strings. it will use at
- *            most n bytes from src
- *
- * @dest: This is the output  dest
- * @src: This is the input src
- * @n: This is the number bytes fro src
- *
- * Return: This is my return
+ *_strncat - concatinate 2 strings.
+ *@dest: first string.
+ *@src: second string.
+ *@n: the number of bytes to use from src.
+ *Return: string.
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
-	int index, count;
+	int i = 0, k = 0;
 
-	for (index = 0; dest[index] != '\0'; index++)
-		;
-	for (count = 0; count < n && src[count] != '\0'; count++)
+	while (dest[i] != '\0')
+		i++;
+
+	while (src[k] != '\0' && n > k)
 	{
-		dest[index] = src[count];
-		index++;
+		dest[i] = src[k];
+		k++;
+		i++;
 	}
-	if (count < n)
+	if (n > 0)
 	{
-	dest[index] = '\0';
+		dest[i] = '\0';
 	}
+
 	return (dest);
 }
