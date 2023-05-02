@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - program  inserts a new node
+ * insert_nodeint_at_index - inserts a new node
  * at a given position.
  * @head: head of a list.
  * @idx: index of the list where the new node is
@@ -13,15 +13,15 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int j;
+	unsigned int i;
 	listint_t *new;
 	listint_t *h;
 
-	*head = h;
+	h = *head;
 
 	if (idx != 0)
 	{
-		for (j = 0; j < idx - 1 && h != NULL; j++)
+		for (i = 0; i < idx - 1 && h != NULL; i++)
 		{
 			h = h->next;
 		}
